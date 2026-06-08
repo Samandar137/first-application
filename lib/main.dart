@@ -1,21 +1,63 @@
+import 'package:flutter/material.dart';
 
+void main() => runApp(const MyApp());
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-void main(){
-
- print('Before the future');
- final future=Future.delayed(const Duration(seconds: 2),()=>42);
-//this function
-print('After the future completed');
-future.then((onValue){
- print('value is $onValue');
-}).catchError((onError){
- print('error is $onError');
-}).whenComplete((){print('future is completed');
-});
-print("heelo");
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(colorSchemeSeed: Colors.blue),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
 }
-///hhhhhhhh
+
+class MyHomePage extends StatefulWidget {
+  final String title;
+
+  const MyHomePage({super.key, required this.title});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(widget.title)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: .center,
+          children: [
+            const Text('You have pushed the button this many times:'),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
 
 
 
