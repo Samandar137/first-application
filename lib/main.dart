@@ -10,54 +10,272 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorSchemeSeed: Colors.blue),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  final String title;
-
-  const MyHomePage({super.key, required this.title});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 40),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 5,
+                      )
+                    ),
+                    child: Icon(
+                      Icons.circle,
+                      size: 15,
+                      ),
+                  ),
+                   Container(
+                    padding: EdgeInsets.all(10),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 5,
+                      )
+                    ),
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    margin: EdgeInsets.only(right: 40,top:20),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 5,
+                      )
+                    ),
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                      ],
+                    ),
+                  ),
+                   Container(
+                    margin: EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.all(5),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 5,
+                      )
+                    ),
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    margin: EdgeInsets.only(right: 40,top:20),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 5,
+                      )
+                    ),
+                   child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                      ],
+                    ),
+                  ),
+                   Container(
+                    padding: EdgeInsets.all(5),
+                    margin: EdgeInsets.only(top: 20),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 5,
+                      )
+                    ),
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Icon(
+                            Icons.circle,
+                            size:15
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Icon(
+                            Icons.circle,
+                            size: 15,
+                            ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
+     
+
+
+
 
 
 
